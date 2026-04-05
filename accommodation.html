@@ -70,19 +70,31 @@
 </head>
 <body>
 
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAV
+  ═══════════════════════════════════════════ -->
   <header>
     <nav>
       <a href="index.html" class="nav-brand">L &amp; S</a>
       <ul class="nav-links">
-        <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Start</a></li>
+        <li><a href="index.html"  data-lang="en">Home</a><a href="index.html" data-lang="de">Start</a></li>
         <li><a href="general.html" data-lang="en">General</a><a href="general.html" data-lang="de">Allgemeines</a></li>
         <li><a href="schedule.html" data-lang="en">Schedule</a><a href="schedule.html" data-lang="de">Ablauf</a></li>
         <li><a href="location.html" data-lang="en">Location</a><a href="location.html" data-lang="de">Ort</a></li>
-        <li><a href="accommodation.html" class="active"  data-lang="en">Stay</a><a href="accommodation.html" class="active" data-lang="de">Unterkunft</a></li>
+        <li><a href="accommodation.html" class="active" data-lang="en">Stay</a><a href="accommodation.html" class="active" data-lang="de">Unterkunft</a></li>
       </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">&#9776;</button>
       <button class="lang-toggle" id="langToggle">DE / EN</button>
     </nav>
   </header>
+
+  <nav class="nav-drawer" id="navDrawer">
+        <a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Start</a>
+        <a href="general.html" data-lang="en">General</a><a href="general.html" data-lang="de">Allgemeines</a>
+        <a href="schedule.html" data-lang="en">Schedule</a><a href="schedule.html" data-lang="de">Ablauf</a>
+        <a href="location.html" data-lang="en">Location</a><a href="location.html" data-lang="de">Ort</a>
+        <a href="accommodation.html" class="active" data-lang="en">Stay</a><a href="accommodation.html" class="active" data-lang="de">Unterkunft</a>
+  </nav>
 
   <section class="page-title">
     <h1 data-lang="en">Where to Stay</h1>
@@ -173,17 +185,37 @@
     <span data-lang="de">Mit Liebe gemacht · Lisa &amp; Simon · 2026</span>
   </footer>
 
+  <!-- ═══════════════════════════════════════════
+       LANGUAGE TOGGLE SCRIPT
+  ═══════════════════════════════════════════ -->
   <script>
     (function () {
+      const STORAGE_KEY = 'wedding-lang';
       const body = document.body;
       const btn  = document.getElementById('langToggle');
-      if (localStorage.getItem('wedding-lang') === 'de') body.classList.add('lang-de');
+
+      // Apply saved preference on load
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === 'de') body.classList.add('lang-de');
+
+      // Toggle on click
       btn.addEventListener('click', function () {
         const isDe = body.classList.toggle('lang-de');
-        localStorage.setItem('wedding-lang', isDe ? 'de' : 'en');
+        localStorage.setItem(STORAGE_KEY, isDe ? 'de' : 'en');
       });
     })();
+    // Hamburger menu
+    (function () {
+      var hamburger = document.getElementById('navHamburger');
+      var drawer    = document.getElementById('navDrawer');
+      if (hamburger && drawer) {
+        hamburger.addEventListener('click', function () {
+          drawer.classList.toggle('is-open');
+        });
+      }
+    })();
   </script>
+
 
 </body>
 </html>
