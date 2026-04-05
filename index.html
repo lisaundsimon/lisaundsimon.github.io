@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lisa &amp; Simon — 27 June 2026</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAV
+  ═══════════════════════════════════════════ -->
+  <header>
+    <nav>
+      <a href="index.html" class="nav-brand">L &amp; S</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active" data-lang="en">Home</a><a href="index.html" class="active" data-lang="de">Start</a></li>
+        <li><a href="general.html" data-lang="en">General</a><a href="general.html" data-lang="de">Allgemeines</a></li>
+        <li><a href="schedule.html" data-lang="en">Schedule</a><a href="schedule.html" data-lang="de">Ablauf</a></li>
+        <li><a href="location.html" data-lang="en">Location</a><a href="location.html" data-lang="de">Ort</a></li>
+        <li><a href="accommodation.html" data-lang="en">Stay</a><a href="accommodation.html" data-lang="de">Unterkunft</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">DE / EN</button>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <span class="hero-ornament"></span>
+    <h1 data-lang="en">Lisa <em>&amp;</em> Simon</h1>
+    <h1 data-lang="de">Lisa <em>&amp;</em> Simon</h1>
+    <br/>
+    <span class="hero-ornament"></span>
+    <p class="hero-date" data-lang="en">27 · June · 2026</p>
+    <p class="hero-date" data-lang="de">27 · Juni · 2026</p>
+    <p class="hero-sub" data-lang="en">We're getting married!</p>
+    <p class="hero-sub" data-lang="de">Wir heiraten!</p>
+  </section>
+
+  
+
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════ -->
+  <main>
+
+    <!-- Welcome note -->
+    <div class="text-center">
+      <p class="section-label" data-lang="en">Welcome</p>
+      <p class="section-label" data-lang="de">Willkommen</p>
+      <h2 data-lang="en">We're so glad you're here</h2>
+      <h2 data-lang="de">Schön, dass du dabei bist</h2>
+      <p class="mt-sm" style="max-width:520px; margin-left:auto; margin-right:auto;" data-lang="en">
+        This little site has everything you need to know about our wedding day.
+        Take a look around and reach out if you have any questions.
+      </p>
+      <p class="mt-sm" style="max-width:520px; margin-left:auto; margin-right:auto;" data-lang="de">
+        Diese kleine Seite enthält alles, was du für unseren großen Tag wissen musst.
+        Schau dich gerne um und melde dich, falls du noch Fragen hast.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Quick-navigation cards -->
+    <div class="card-grid">
+
+
+      <a href="general.html" class="card" style="text-decoration:none; color:inherit;">
+        <p class="section-label" data-lang="en">The Day</p>
+        <p class="section-label" data-lang="de">Allgmein</p>
+        <h3 data-lang="en">Schedule and Food</h3>
+        <h3 data-lang="de">Infos für euch</h3>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="en">
+          Kontakte, Geschenke, Dresscode etc.
+        </p>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="de">
+          Kontakte, Geschenke, Dresscode etc.
+        </p>
+      </a>
+
+      <a href="schedule.html" class="card" style="text-decoration:none; color:inherit;">
+        <p class="section-label" data-lang="en">The Day</p>
+        <p class="section-label" data-lang="de">Der Tag</p>
+        <h3 data-lang="en">Schedule and Food</h3>
+        <h3 data-lang="de">Ablauf und Essen</h3>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="en">
+          Ceremony at 3:00 pm, dinner and more later.
+        </p>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="de">
+          Trauung um 15:00 Uhr, Abendessen und mehr anschließend.
+        </p>
+      </a>
+
+      <a href="location.html" class="card" style="text-decoration:none; color:inherit;">
+        <p class="section-label" data-lang="en">Getting Here</p>
+        <p class="section-label" data-lang="de">Anreise</p>
+        <h3 data-lang="en">Location &amp; Travel</h3>
+        <h3 data-lang="de">Ort &amp; Anreise</h3>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="en">
+          Venue address, directions and parking info.
+        </p>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="de">
+          Adresse, Wegbeschreibung und Parkinformationen.
+        </p>
+      </a>
+
+      <a href="accommodation.html" class="card" style="text-decoration:none; color:inherit;">
+        <p class="section-label" data-lang="en">Where to Sleep</p>
+        <p class="section-label" data-lang="de">Übernachten</p>
+        <h3 data-lang="en">Accommodation</h3>
+        <h3 data-lang="de">Unterkunft</h3>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="en">
+          Our recommended hotels and places to stay nearby.
+        </p>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="de">
+          Unsere Hotelempfehlungen in der Nähe.
+        </p>
+      </a>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfycxNAwHYyaBGs0W3RQyR7zWDWJEEf-i6Aq6txapwu2VQ3cQ/viewform?usp=publish-editor" class="card" style="text-decoration:none; color:inherit;">
+        <p class="section-label" data-lang="en">Where to Sleep</p>
+        <p class="section-label" data-lang="de">Formular</p>
+        <h3 data-lang="en">Accommodation</h3>
+        <h3 data-lang="de">Bitte ausfüllen</h3>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="en">
+          Our recommended hotels and places to stay nearby.
+        </p>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="de">
+          Wir haben noch ein paar kleine Fragen an dich.
+        </p>
+      </a>
+
+      <a href="wedding.ics" download="Lisa-Simon-Hochzeit.ics" class="card" style="text-decoration:none; color:inherit;">
+        <p class="section-label" data-lang="en">Where to Sleep</p>
+        <p class="section-label" data-lang="de">Kalendereintrag</p>
+        <h3 data-lang="en">Accommodation</h3>
+        <h3 data-lang="de">Datum vormerken</h3>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="en">
+          Our recommended hotels and places to stay nearby.
+        </p>
+        <p class="mt-sm" style="font-size:0.9rem; color:var(--taupe);" data-lang="de">
+          27. Juni 2026 · Restaurant Schützenhaus auf dem Turmberg      
+         </p>
+      </a>
+
+    </div>
+
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <span data-lang="en">Made with love · Lisa &amp; Simon · 2026</span>
+    <span data-lang="de">Mit Liebe gemacht · Lisa &amp; Simon · 2026</span>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       LANGUAGE TOGGLE SCRIPT
+  ═══════════════════════════════════════════ -->
+  <script>
+    (function () {
+      const STORAGE_KEY = 'wedding-lang';
+      const body = document.body;
+      const btn  = document.getElementById('langToggle');
+
+      // Apply saved preference on load
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === 'de') body.classList.add('lang-de');
+
+      // Toggle on click
+      btn.addEventListener('click', function () {
+        const isDe = body.classList.toggle('lang-de');
+        localStorage.setItem(STORAGE_KEY, isDe ? 'de' : 'en');
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule — Lisa &amp; Simon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-brand">L &amp; S</a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Start</a></li>
+        <li><a href="general.html" data-lang="en">General</a><a href="general.html" data-lang="de">Allgemeines</a></li>
+        <li><a href="schedule.html" class="active" data-lang="en">Schedule</a><a href="schedule.html" class="active" data-lang="de">Ablauf</a></li>
+        <li><a href="location.html" data-lang="en">Location</a><a href="location.html" data-lang="de">Ort</a></li>
+        <li><a href="accommodation.html" data-lang="en">Stay</a><a href="accommodation.html" data-lang="de">Unterkunft</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">DE / EN</button>
+    </nav>
+  </header>
+
+  <section class="page-title">
+    <h1 data-lang="en">The Day</h1>
+    <h1 data-lang="de">Der Tag</h1>
+    <p data-lang="en">Saturday, 27 June 2026</p>
+    <p data-lang="de">Samstag, 27. Juni 2026</p>
+  </section>
+
+  <main>
+
+    <p class="section-label" data-lang="en">Programme</p>
+    <p class="section-label" data-lang="de">Ablauf</p>
+    <h2 data-lang="en">What to expect</h2>
+    <h2 data-lang="de">Was euch erwartet</h2>
+    <p class="mt-sm" style="color:var(--taupe); max-width:540px;" data-lang="en">
+      Here's a rough outline of the day. Timings may shift slightly — we'll keep
+      you posted if anything changes.
+    </p>
+    <p class="mt-sm" style="color:var(--taupe); max-width:540px;" data-lang="de">
+      Hier ist ein grober Überblick über den Tag. 
+      Falls sich etwas ändert, halten wir euch auf dem Laufenden.
+    </p>
+
+    <ul class="timeline">
+
+      <li class="timeline-item">
+        <p class="timeline-time">15:00</p>
+        <h3 data-lang="en">Ceremony</h3>
+        <h3 data-lang="de">Freie Trauung</h3>
+        <p data-lang="en">The ceremony will take place outdoors – fingers crossed for great weather!</p>
+        <p data-lang="de">Die Zeremonie findet draußen statt – wir drücken die Daumen für bestes Wetter!</p>
+      </li>
+
+      <li class="timeline-item">
+        <p class="timeline-time">16:00</p>
+        <h3 data-lang="en">Welcome Drinks</h3>
+        <h3 data-lang="de">Sektempfang</h3>
+        <p data-lang="en">Sparkling wine and tarte flambée will be waiting.</p>
+        <p data-lang="de">Sekt und Flammkuchen stehen bereit.</p>
+      </li>
+
+
+      <li class="timeline-item">
+        <p class="timeline-time">18:30</p>
+        <h3 data-lang="en">Dinner</h3>
+        <h3 data-lang="de">Abendessen</h3>
+        <p data-lang="en">Buffet with plenty of vegetarian and vegan options. </p>
+        <p data-lang="de">Buffet mit vielen vegetarischen und veganen Optionen.  </p>
+      </li>
+
+      <li class="timeline-item">
+        <p class="timeline-time">21:30</p>
+        <h3 >Dancefloor</h3>
+        <p data-lang="en">No DJ, just a curated 2-hour playlist! 🕺💃</p>
+        <p data-lang="de">Kein DJ, sondern eine kuratierte Playlist für 2 Stunden!🕺💃.</p>
+      </li>
+
+      <li class="timeline-item">
+        <p class="timeline-time">23:30</p>
+        <h3 >Chilli-Vanilli</h3>
+        <p >Open-end  😌</p>
+      </li>
+    </ul>
+
+    <div class="divider"></div>
+
+
+    <div class="text-center">
+      <p class="section-label" data-lang="en">Additional Info</p>
+      <p class="section-label" data-lang="de">Weitere Informationen</p>
+      <h2 data-lang="en">What else you need to know</h2>
+      <h2 data-lang="de">Was es sonst zu beachten gibt</h2>
+      <p data-lang="de">
+        Alle Programmpunkte bitte vorher mit unseren TrauzeugInnen abklären! 😉 <br/>
+        Beim Essen ist für reichlich vegetarische Optionen gesorgt – falls ihr andere kulinarische Wünsche oder Einschränkungen habt, gebt sie bitte in der Umfrage an. <br/>
+        Und wenn ihr einen Song für die Playlist beisteuern wollt: gerne in der Umfrage eintragen, wir garantieren aber nichts 😄
+      </p>
+      <p data-lang="en">
+        Please check all planned activities with our witnesses first! 😉 <br/>
+        There will be plenty of vegetarian options at dinner – if you have other dietary preferences or restrictions, please indicate them in the survey. <br/>
+        And if you want to contribute a song to the playlist: feel free to add it in the survey, but no promises 😄
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <span data-lang="en">Made with love · Lisa &amp; Simon · 2026</span>
+    <span data-lang="de">Mit Liebe gemacht · Lisa &amp; Simon · 2026</span>
+  </footer>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const btn  = document.getElementById('langToggle');
+      if (localStorage.getItem('wedding-lang') === 'de') body.classList.add('lang-de');
+      btn.addEventListener('click', function () {
+        const isDe = body.classList.toggle('lang-de');
+        localStorage.setItem('wedding-lang', isDe ? 'de' : 'en');
+      });
+    })();
+  </script>
+
+</body>
+</html>

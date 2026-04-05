@@ -1,0 +1,362 @@
+/* ============================================================
+   style.css — Wedding Site
+   ============================================================ */
+
+/* --- Fonts ------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+/* --- Variables -------------------------------------------- */
+:root {
+  --cream:       #faf8f4;
+  --parchment:   #f0ebe0;
+  --stone:       #c8bfaf;
+  --taupe:       #8a7f72;
+  --ink:         #2e2a25;
+  --accent:      #9b8d6e;
+  --white:       #ffffff;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Jost', sans-serif;
+
+  --max-width: 860px;
+  --nav-height: 72px;
+}
+
+/* --- Reset ------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.75;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Language Toggle --------------------------------------- */
+/* Show EN content by default; hide DE */
+[data-lang="en"] { display: none; }
+
+body.lang-de [data-lang="en"] { display: revert; }
+body.lang-de [data-lang="de"] { display: none; }
+
+/* --- Header / Nav ----------------------------------------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--cream);
+  border-bottom: 1px solid var(--stone);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 2px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--ink);
+  background: var(--parchment);
+}
+
+/* Language toggle button */
+.lang-toggle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid var(--stone);
+  color: var(--taupe);
+  padding: 0.35rem 0.75rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+  background: var(--parchment);
+}
+
+/* --- Hero -------------------------------------------------- */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem 5rem;
+  border-bottom: 1px solid var(--stone);
+}
+
+.hero-ornament {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 auto 2rem;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-date {
+  margin-top: 1.25rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+
+.hero-sub {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 2.0rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--taupe);
+}
+
+/* --- Main content ------------------------------------------ */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* --- Page title (inner pages) ----------------------------- */
+.page-title {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  border-bottom: 1px solid var(--stone);
+}
+
+.page-title h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+.page-title p {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+
+/* --- Section headings ------------------------------------- */
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+
+p { margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+/* --- Divider ----------------------------------------------- */
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--stone);
+  margin: 3rem auto;
+}
+
+/* --- Cards / Info blocks ----------------------------------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--parchment);
+  border-radius: 4px;
+  padding: 2rem 1.75rem;
+}
+
+.card h3 { margin-bottom: 0.5rem; }
+
+/* --- Timeline / Schedule ----------------------------------- */
+.timeline {
+  list-style: none;
+  margin-top: 2.5rem;
+  border-left: 1px solid var(--stone);
+  padding-left: 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.25rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.375rem;
+  top: 0.35rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 1.5px solid var(--accent);
+}
+
+.timeline-time {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+
+.timeline-item h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.timeline-item p { font-size: 0.9rem; color: var(--taupe); }
+
+/* --- FAQ --------------------------------------------------- */
+.faq-list { margin-top: 2.5rem; }
+
+.faq-item {
+  border-top: 1px solid var(--parchment);
+  padding: 1.5rem 0;
+}
+
+.faq-item:last-child { border-bottom: 1px solid var(--parchment); }
+
+.faq-question {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer { font-size: 0.95rem; color: var(--taupe); }
+
+/* --- Links & buttons --------------------------------------- */
+a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--ink); }
+
+.btn {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  padding: 0.65rem 1.5rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover { background: var(--ink); color: var(--cream); }
+
+/* --- Footer ------------------------------------------------ */
+footer {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-top: 1px solid var(--stone);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+/* --- Utilities --------------------------------------------- */
+.text-center { text-align: center; }
+.mt-sm { margin-top: 1rem; }
+.mt-md { margin-top: 2rem; }
+.mt-lg { margin-top: 3.5rem; }
+
+/* --- Responsive -------------------------------------------- */
+@media (max-width: 600px) {
+  .nav-links a { font-size: 0.72rem; padding: 0.35rem 0.5rem; }
+  .nav-brand { font-size: 1.2rem; }
+  .hero { padding: 4rem 1.5rem 3.5rem; }
+  main { padding: 3rem 1.5rem; }
+}

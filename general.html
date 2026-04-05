@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule — Lisa &amp; Simon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-brand">L &amp; S</a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Start</a></li>
+        <li><a href="general.html" class="active" data-lang="en">General</a><a href="general.html" class="active" data-lang="de">Allgemeines</a></li>
+        <li><a href="schedule.html" data-lang="en">Schedule</a><a href="schedule.html" data-lang="de">Ablauf</a></li>
+        <li><a href="location.html" data-lang="en">Location</a><a href="location.html" data-lang="de">Ort</a></li>
+        <li><a href="accommodation.html" data-lang="en">Stay</a><a href="accommodation.html" data-lang="de">Unterkunft</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">DE / EN</button>
+    </nav>
+  </header>
+
+  <section class="page-title">
+    <h1 data-lang="en">The Day</h1>
+    <h1 data-lang="de">Allgemeine Infos</h1>
+  </section>
+
+  <main>
+
+    <div class="text-center">
+        <p class="section-label" data-lang="en">Programme</p>
+    <p class="section-label" data-lang="de">Dresscode</p>
+    <h2 data-lang="en">What to expect</h2>
+    <h2 data-lang="de">Eure Garderobe</h2>
+    <p data-lang="en">
+      Our theme is “summer chic” – what exactly that means is up to you. 
+      Since we’re planning to spend the whole day outdoors (weather permitting), we recommend bringing something to keep you warm later in the evening.
+    </p>
+    <p data-lang="de">
+      "Sommerlich schick" ist unser Motto – was genau das für euch heißt, dürft ihr ganz entspannt selbst entscheiden. 
+      Da wir den Tag (bei gutem Wetter) komplett draußen verbringen möchten, denkt am besten auch an etwas zum Überziehen für den späteren Abend.
+    </p>
+
+    </div>
+    
+
+    <div class="divider"></div>
+
+
+    <div class="text-center">
+      <p class="section-label" data-lang="en">Gifts</p>
+      <p class="section-label" data-lang="de">Geschenke</p>
+      <h2 data-lang="en">What we wish for</h2>
+      <h2 data-lang="de">Das wünschen wir uns</h2>
+      <p data-lang="de">
+        Am meisten freuen wir uns über gemeinsame Zeit und schöne Erinnerungen mit euch. 
+        Falls ihr uns darüber hinaus eine Freude machen möchtet: wir planen gerade unseren nächsten großen Urlaub 😉
+      </p>
+      <p data-lang="en">
+        What makes us happiest is spending time together and creating great memories with you! 
+        If you’d still like to give us something beyond that: we’re currently planning our next big trip 😉
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="text-center">
+      <p class="section-label" data-lang="en">Photography</p>
+      <p class="section-label" data-lang="de">Fotos</p>
+      <h2 data-lang="en">Capturing memories</h2>
+      <h2 data-lang="de">Erinnerungen festhalten</h2>
+      <p data-lang="de">
+        Eine professionelle Fotografin wird unseren Tag begleiten, sodass wir die Feier alle in vollen Zügen genießen können, ohne ständig zum Handy greifen zu müssen. 
+        Die Bilder stellen wir nach der Hochzeit hier für euch zur Verfügung.
+      </p>
+      <p data-lang="en">
+        A professional photographer will be capturing the day, so we can all fully enjoy the celebration without constantly reaching for our phones. 
+        The photos will be uploaded here after the wedding.
+      </p>
+    </div>
+
+
+    <div class="divider"></div>
+
+    <div class="text-center">
+      <p class="section-label" data-lang="en">Contacts</p>
+      <p class="section-label" data-lang="de">Kontakte</p>
+      <h2 data-lang="en">Questions? Just ask</h2>
+      <h2 data-lang="de">Falls es offene Fragen gibt</h2>
+      <p data-lang="de">
+        Falls ihr Fragen habt, meldet euch jederzeit gerne bei uns. 
+        Und wenn’s um Überraschungen oder geheime Absprachen geht, wendet euch am besten an unsere TrauzeugInnen Meli und Lukas 😉
+      </p>
+      <p data-lang="en">
+        If you have any questions, feel free to reach out to us anytime. 
+        And if it’s about surprises or secret plans, your best bet is to contact our witnesses, Meli and Lukas 😉
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <span data-lang="en">Made with love · Lisa &amp; Simon · 2026</span>
+    <span data-lang="de">Mit Liebe gemacht · Lisa &amp; Simon · 2026</span>
+  </footer>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const btn  = document.getElementById('langToggle');
+      if (localStorage.getItem('wedding-lang') === 'de') body.classList.add('lang-de');
+      btn.addEventListener('click', function () {
+        const isDe = body.classList.toggle('lang-de');
+        localStorage.setItem('wedding-lang', isDe ? 'de' : 'en');
+      });
+    })();
+  </script>
+
+</body>
+</html>

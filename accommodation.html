@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accommodation — Lisa &amp; Simon</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hotel-list {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .hotel-card {
+      background: var(--white);
+      border: 1px solid var(--parchment);
+      border-radius: 4px;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem 2rem;
+      align-items: start;
+    }
+
+    @media (max-width: 540px) {
+      .hotel-card { grid-template-columns: 1fr; }
+    }
+
+    .hotel-card h3 { margin-bottom: 0.3rem; }
+
+    .hotel-meta {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 0.75rem;
+    }
+
+    .hotel-card p {
+      font-size: 0.92rem;
+      color: var(--taupe);
+    }
+
+    .hotel-card .btn {
+      align-self: start;
+      white-space: nowrap;
+    }
+
+    .tip-box {
+      background: var(--parchment);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 4px 4px 0;
+      padding: 1.25rem 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.92rem;
+      color: var(--taupe);
+    }
+
+    .tip-box strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-brand">L &amp; S</a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="de">Start</a></li>
+        <li><a href="general.html" data-lang="en">General</a><a href="general.html" data-lang="de">Allgemeines</a></li>
+        <li><a href="schedule.html" data-lang="en">Schedule</a><a href="schedule.html" data-lang="de">Ablauf</a></li>
+        <li><a href="location.html" data-lang="en">Location</a><a href="location.html" data-lang="de">Ort</a></li>
+        <li><a href="accommodation.html" class="active"  data-lang="en">Stay</a><a href="accommodation.html" class="active" data-lang="de">Unterkunft</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">DE / EN</button>
+    </nav>
+  </header>
+
+  <section class="page-title">
+    <h1 data-lang="en">Where to Stay</h1>
+    <h1 data-lang="de">Unterkunft</h1>
+    <p data-lang="en">Our recommended hotels near the venue</p>
+    <p data-lang="de">Unsere Hotelempfehlungen in der Nähe</p>
+  </section>
+
+  <main>
+
+    <p class="section-label" data-lang="en">Hotels</p>
+    <p class="section-label" data-lang="de">Hotels</p>
+    <h2 data-lang="en">Places we recommend</h2>
+    <h2 data-lang="de">Unsere Empfehlungen</h2>
+
+    <div class="hotel-list">
+
+      <!-- Hotel 1 -->
+      <div class="hotel-card">
+        <div>
+          <p class="hotel-meta" data-lang="en">This is where we stay</p>
+          <p class="hotel-meta" data-lang="de">Hier übernachten wir</p>
+          <h3>Der Blaue Reiter</h3>
+          <p data-lang="en">
+            4-star hotel with Asian Bar Food restaurant and S-Bahn connection.
+          </p>
+          <p data-lang="de">
+            4-Sterne Hotel mit asiatischem Restaurant und S-Bahn-Anbindung.
+          </p>
+        </div>
+        <a href="https://hotelderblauereiter.de/?gad_source=1&gad_campaignid=23285046386&gclid=Cj0KCQjwkMjOBhC5ARIsADIdb3e4Bda7pVsOvPL0CKZ-_URWIJhKjTxH21HmbjIzh7hdWp_naXwNDiEaAo8IEALw_wcB" class="btn">
+          <p data-lang="en">
+            Book
+          </p>
+          <p data-lang="de">
+            Buchen
+          </p>
+        </a>
+      </div>
+
+      <!-- Hotel 2 -->
+      <div class="hotel-card">
+        <div>
+          <p class="hotel-meta" data-lang="en">Budget-friendly alternative</p>
+          <p class="hotel-meta" data-lang="de">Geldbeutel-freundliche Alternative</p>
+          <h3>ibis Budget Karlsruhe</h3>
+          <p data-lang="en">
+            Just a 20-minute walk from our hotel.
+          </p>
+          <p data-lang="de">
+            Nur 20 Minuten zu Fuß von unserem Hotel entfernt.
+          </p>
+        </div>
+        <a href="https://all.accor.com/booking/de/accor/hotel/3179?dateIn=2026-06-26&compositions=2&stayplus=false&snu=false&accessibleRooms=false&hideWDR=false&productCode=null&hideHotelDetails=true&dateOut=2026-06-28" class="btn">
+          <p data-lang="en">
+            Book
+          </p>
+          <p data-lang="de">
+            Buchen
+          </p>
+        </a>
+      </div>
+
+
+    </div>
+
+    <!-- Tip box -->
+    <div class="tip-box">
+      <div data-lang="en">
+        <strong>💡 A tip from us</strong>
+        <span>
+         Of course, there are plenty of other hotels in Karlsruhe as well. 
+         Durlach and Oststadt areas are the best options. 
+        </span>
+      </div>
+      <div data-lang="de">
+        <strong>💡 Ein Tipp von uns</strong>
+        <span>
+        Es gibt natürlich auch genügend andere Hotels in Karlsruhe. Durlach bzw. Oststadt bieten sich am besten an.
+        </span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <span data-lang="en">Made with love · Lisa &amp; Simon · 2026</span>
+    <span data-lang="de">Mit Liebe gemacht · Lisa &amp; Simon · 2026</span>
+  </footer>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const btn  = document.getElementById('langToggle');
+      if (localStorage.getItem('wedding-lang') === 'de') body.classList.add('lang-de');
+      btn.addEventListener('click', function () {
+        const isDe = body.classList.toggle('lang-de');
+        localStorage.setItem('wedding-lang', isDe ? 'de' : 'en');
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-lang="en">Location &amp; Travel — Lisa &amp; Simon</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Page-specific styles ── */
+
+    .venue-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 640px) {
+      .venue-block { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
+    .venue-map {
+      aspect-ratio: 4 / 3;
+      background: var(--parchment);
+      border: 1px solid var(--stone);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Replace the iframe below with a real Google Maps embed */
+    .venue-map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .venue-map-placeholder {
+      text-align: center;
+      color: var(--stone);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 2rem;
+    }
+
+    .venue-details address {
+      font-style: normal;
+      margin-top: 1rem;
+      line-height: 1.9;
+      color: var(--taupe);
+    }
+
+    .venue-details address strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    /* Travel options */
+    .travel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .travel-card {
+      border: 1px solid var(--parchment);
+      border-radius: 4px;
+      padding: 1.75rem;
+      background: var(--white);
+    }
+
+    .travel-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .travel-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .travel-card p {
+      font-size: 0.88rem;
+      color: var(--taupe);
+      margin-bottom: 0.4rem;
+    }
+
+    .travel-card a {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAV
+  ═══════════════════════════════════════════ -->
+  <header>
+    <nav>
+      <a href="index.html" class="nav-brand">L &amp; S</a>
+      <ul class="nav-links">
+        <li><a href="index.html"  data-lang="en">Home</a><a href="index.html" data-lang="de">Start</a></li>
+        <li><a href="general.html" data-lang="en">General</a><a href="general.html" data-lang="de">Allgemeines</a></li>
+        <li><a href="schedule.html" data-lang="en">Schedule</a><a href="schedule.html" data-lang="de">Ablauf</a></li>
+        <li><a href="location.html" class="active" data-lang="en">Location</a><a href="location.html" class="active" data-lang="de">Ort</a></li>
+        <li><a href="accommodation.html" data-lang="en">Stay</a><a href="accommodation.html" data-lang="de">Unterkunft</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle">DE / EN</button>
+    </nav>
+  </header>
+
+
+  
+  <!-- ═══════════════════════════════════════════
+       PAGE TITLE
+  ═══════════════════════════════════════════ -->
+  <section class="page-title">
+    <h1 data-lang="en">Location &amp; Travel</h1>
+    <h1 data-lang="de">Ort &amp; Anreise</h1>
+    <p data-lang="en">Everything you need to find us</p>
+    <p data-lang="de">Alles, was du brauchst, um zu uns zu finden</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── Venue ── -->
+     <div class="text-center">
+      <p class="section-label" data-lang="en">The Venue</p>
+      <p class="section-label" data-lang="de">Die Location</p>
+      <h2 data-lang="en">Where it all happens</h2>
+      <h2 data-lang="de">Hier findet es statt</h2>
+     </div>
+    
+
+    <div class="venue-block">
+
+      <!-- Map placeholder — replace with a real Google Maps embed:
+           1. Go to maps.google.com, search your venue
+           2. Click Share → Embed a map → Copy HTML
+           3. Replace the <div class="venue-map-placeholder"> below with the <iframe> tag -->
+      <div class="venue-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2617.8343895797307!2d8.49083707704201!3d48.994708971350846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479709190ef72281%3A0xfe7fdb9d35c0774c!2sRestaurant%20Sch%C3%BCtzenhaus%20auf%20dem%20Turmberg!5e0!3m2!1sde!2sde!4v1775313022582!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="venue-details">
+        <address>
+          <strong>Restaurant Schützenhaus auf dem Turmberg</strong>
+          Jean-Ritzert-Str. 8<br />
+          76227 Karlsruhe
+        </address>
+        <p class="mt-sm" data-lang="en">
+          The ceremony and reception both take place here.
+        </p>
+        <p class="mt-sm" data-lang="de">
+          Zeremonie und Feier finden beide hier statt.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ── Getting There ── -->
+    <div class="text-center">
+      <p class="section-label" data-lang="en">Travel</p>
+      <p class="section-label" data-lang="de">Anreise</p>
+      <h2 data-lang="en">Getting there</h2>
+      <h2 data-lang="de">So kommt ihr zu uns</h2>
+    </div>
+    
+
+    <div class="travel-grid">
+
+      <!-- By Train -->
+      <div class="travel-card">
+        <span class="travel-icon">🚆</span>
+        <h3 data-lang="en">By Train</h3>
+        <h3 data-lang="de">Mit der Bahn</h3>
+        <p data-lang="en">
+          Take the S-Bahn <strong>S5</strong> or Tram <strong>1</strong> to <strong>Durlach Turmberg</strong>.
+          We'll arrange a shuttle from there - if you need one, please indicate so in the survey.
+        </p>
+        <p data-lang="de">
+          Mit der <strong>S5</strong> oder Tramlinie <strong>1</strong> bis <strong>Durlach Turmberg</strong>. 
+          Von dort organisieren wir ein Shuttle - falls ihr Bedarf habt, gebt es bitte in der Umfrage an.
+        </p>
+      </div>
+      
+      <!-- By Car -->
+      <div class="travel-card">
+        <span class="travel-icon">🚗</span>
+        <h3 data-lang="en">By Car</h3>
+        <h3 data-lang="de">Mit dem Auto</h3>
+        <p data-lang="en">
+           From the A5, take the exit toward B10/Bretten/Pfinztal, then follow the B3 toward Karlsruhe-Durlach. 
+           Take the Turmberg ramp via Neßlerstraße, Reichardstraße, and Jean-Ritzert-Straße. 
+        </p>
+        <p data-lang="de">
+          Von der A5, Ausfahrt Richtung <strong>B10/Bretten/Pfinztal</strong> nehmen, dann über B3 Richtung KA-Durlach. 
+          Auffahrt Turmberg über Neßlerstraße, Reichardstraße und Jean-Ritzert-Straße.
+        </p>
+      </div>
+
+      <!-- Parking -->
+      <div class="travel-card">
+        <span class="travel-icon">🅿️</span>
+        <h3 data-lang="en">Parking</h3>
+        <h3 data-lang="de">Parken</h3>
+        <p data-lang="en">
+          There is plenty of free parking available right in front of the restaurant.
+        </p>
+        <p data-lang="de">
+          Kostenlose Parkplätze sind ausreichend und direkt vor dem Restaurant vorhanden.
+        </p>
+      </div>
+
+      
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ── Shuttle note ── -->
+    <div class="text-center">
+      <p class="section-label" data-lang="en">Trip home</p>
+      <p class="section-label" data-lang="de">Heimreise</p>
+      <h2 data-lang="en">Getting home wiht a taxi</h2>
+      <h2 data-lang="de">Abreise mit dem Taxi</h2>
+      <p class="mt-sm" style="max-width:520px; margin-left:auto; margin-right:auto; color:var(--taupe);" data-lang="en">
+        Leave the car! 
+        We recommend taking a taxi home. 
+        If you need help or are interested, please let us know in the survey. 
+        More info will follow.
+      </p>
+      <p class="mt-sm" style="max-width:520px; margin-left:auto; margin-right:auto; color:var(--taupe);" data-lang="de">
+        Lass das Auto stehen! 
+        Wir empfehlen die Heimreise mit dem Taxi. 
+        Falls ihr Unterstützung braucht oder Interesse daran habt, gebt bitte in der Umfrage Bescheid. 
+        Weitere Infos folgen noch.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <span data-lang="en">Made with love · Lisa &amp; Simon · 2026</span>
+    <span data-lang="de">Mit Liebe gemacht · Lisa &amp; Simon · 2026</span>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       LANGUAGE TOGGLE SCRIPT
+  ═══════════════════════════════════════════ -->
+  <script>
+    (function () {
+      const STORAGE_KEY = 'wedding-lang';
+      const body = document.body;
+      const btn  = document.getElementById('langToggle');
+
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === 'de') body.classList.add('lang-de');
+
+      btn.addEventListener('click', function () {
+        const isDe = body.classList.toggle('lang-de');
+        localStorage.setItem(STORAGE_KEY, isDe ? 'de' : 'en');
+      });
+    })();
+  </script>
+
+</body>
+</html>
