@@ -14,6 +14,8 @@
   --ink:         #2e2a25;
   --accent:      #9b8d6e;
   --white:       #ffffff;
+  --dark-blue:  #B0C4E2;
+  --light-blue: #DAE3F1;
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Jost', sans-serif;
@@ -78,6 +80,11 @@ nav {
   white-space: nowrap;
 }
 
+.nav-brand img {
+  height: 70px; /* or 48px, 56px — adjust to taste */
+  display: block;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -128,6 +135,8 @@ nav {
   color: var(--ink);
   background: var(--parchment);
 }
+
+
 
 /* --- Hero -------------------------------------------------- */
 .hero {
@@ -236,6 +245,14 @@ h3 {
 p { margin-bottom: 1rem; }
 p:last-child { margin-bottom: 0; }
 
+ul {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: -1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
 /* --- Divider ----------------------------------------------- */
 .divider {
   width: 48px;
@@ -259,6 +276,13 @@ p:last-child { margin-bottom: 0; }
   padding: 2rem 1.75rem;
 }
 
+.card_highlighted {
+  background: var(--light-blue);
+  border: 1px solid var(--parchment);
+  border-radius: 4px;
+  padding: 2rem 1.75rem;
+}
+
 .card h3 { margin-bottom: 0.5rem; }
 
 /* --- Timeline / Schedule ----------------------------------- */
@@ -277,13 +301,13 @@ p:last-child { margin-bottom: 0; }
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -2.375rem;
+  left: -2.275rem;
   top: 0.35rem;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: var(--cream);
-  border: 1.5px solid var(--accent);
+  border: 2px solid var(--dark-blue);
 }
 
 .timeline-time {
@@ -334,7 +358,7 @@ a:hover { color: var(--ink); }
   transition: background 0.2s, color 0.2s;
 }
 
-.btn:hover { background: var(--ink); color: var(--cream); }
+.btn:hover { background: var(--light-blue); color: var(--ink); }
 
 /* --- Footer ------------------------------------------------ */
 footer {
